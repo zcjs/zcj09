@@ -3,7 +3,6 @@ package com.jikexueyuan.demo.springmvc.lesson6.service.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -20,7 +19,7 @@ import com.jikexueyuan.demo.springmvc.lesson6.entity.SysUser;
 import com.jikexueyuan.demo.springmvc.lesson6.service.ISysUserService;
 import com.mysql.jdbc.Statement;
 
-@Service
+@Service("ISysUserService")
 public class SysUserServiceImpl implements ISysUserService {
 
 	@Resource
@@ -72,7 +71,6 @@ public class SysUserServiceImpl implements ISysUserService {
 	public void deleteByIdWithMybatis(int customer_id) {
 		dao.deleteById(customer_id);
 	}
-
 
 	@Transactional
 	public SysUser login(String s)

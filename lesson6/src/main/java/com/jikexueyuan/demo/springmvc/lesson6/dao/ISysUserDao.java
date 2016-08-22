@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.jikexueyuan.demo.springmvc.lesson6.entity.SysUser;
 
-@Repository
+@Repository("ISysUserDao")
 public interface ISysUserDao {
 
 	public void save(SysUser user);

@@ -85,12 +85,19 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t}\r\n");
       out.write("\t.me\r\n");
       out.write("\t{\r\n");
-      out.write("\t\tpadding-bottom:10px;\r\n");
-      out.write("\t\tpadding-left: 180px;\r\n");
+      out.write("\t\tmargin-top:-150px;\r\n");
+      out.write("\t\tmargin-left:200px;\r\n");
+      out.write("\t}\r\n");
+      out.write("\t.container\r\n");
+      out.write("\t{\r\n");
+      out.write("\t\tmargin-top: 200px;\r\n");
       out.write("\t}\r\n");
       out.write("</style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
+      out.write("<div class=\"me\">\r\n");
+      out.write("<h1>10914 朱春杰</h1>\r\n");
+      out.write("</div>\r\n");
       out.write("<div class=\"container\">\r\n");
       out.write("\t\t<form action=\"login\" class=\"form-signin-heading\" >\r\n");
       out.write("\t\t<h1>电影租赁管理系统</h1>\r\n");
@@ -101,9 +108,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</form>\r\n");
       out.write("\t</div>\r\n");
       out.write("\r\n");
-      out.write("<div class=\"me\">\r\n");
-      out.write("<h1>10914 朱春杰</h1>\r\n");
-      out.write("</div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {

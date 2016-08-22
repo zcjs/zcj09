@@ -9,27 +9,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>显示全部</title>
+ <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <script type="text/javascript" src="bootstrap/js/jquery-1.4.3.js"></script>
 <script type="text/javascript">
-$(function(){
-	$("#btn").click(function(){
+
 		$.post("all2.do",function(data){
 			var html = "";
 			for(var i = 0;i<data.length;i++){
-				html+="<tr><td>"+data[i].first_name+"</td><td>"+data[i].last_name+"</td><td>"+data[i].address_id+"</td><td>"+data[i].email+"</td><td>"+data[i].customer_id+"</td><td>"+data[i].last_update+"</td></tr>"
+				html+="<tr><td>"+data[i].first_name+"</td><td>"+data[i].last_name+"</td><td>"+data[i].address_id+"</td><td>"+data[i].email+"</td><td>"+data[i].customer_id+"</td></tr>"
 			}
 			$("#content").html(html);
 		});
-	});
-});
-
+	
 </script>
 </head>
 <body>
 <body>
 <a href="add.jsp" style="text-decoration: none">增加用户</a>
-   <center><input type="button" id="btn" value="查询"/></center>
-	<table align="center" width="500" border="1" height="180"
+	<table align="center" width="1000" border="1" height="180"
 		bordercolor="white"  cellpadding="1" cellspacing="1">
 		<tr align="center">
 			<td>first_name</td>
@@ -38,6 +35,7 @@ $(function(){
 			<td>email</td>
 			<td>customer_id</td>
 			<td>last_update</td>
+			<td>操作</td>
 		</tr>
 		<tbody id="content"></tbody>
 

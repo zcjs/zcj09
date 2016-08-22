@@ -28,12 +28,19 @@
 	}
 	.me
 	{
-		padding-bottom:10px;
-		padding-left: 180px;
+		margin-top:-150px;
+		margin-left:200px;
+	}
+	.container
+	{
+		margin-top: 200px;
 	}
 </style>
 </head>
 <body>
+<div class="me">
+<h1>10914 朱春杰</h1>
+</div>
 <div class="container">
 		<form action="login" class="form-signin-heading" >
 		<h1>电影租赁管理系统</h1>
@@ -44,8 +51,5 @@
 	</form>
 	</div>
 
-<div class="me">
-<h1>10914 朱春杰</h1>
-</div>
 </body>
 </html>

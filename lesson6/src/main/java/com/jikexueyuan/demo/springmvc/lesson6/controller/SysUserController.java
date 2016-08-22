@@ -32,7 +32,6 @@ public class SysUserController {
 	{
 		List<SysUser> list = new ArrayList<SysUser>(); 
 		list = service.selectAllWithMybatis();
-		System.out.println(list);
 		return list;
 	}
 	
@@ -74,7 +73,6 @@ public class SysUserController {
 	public String login(String uname)
 	{	
 		SysUser su =service.login(uname);
-		System.out.println(su);
 		if(su != null)
 		{
 			return "all";

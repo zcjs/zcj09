@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.jikexueyuan.demo.springmvc.lesson6.dao.ISysUserDao">
+
+	<cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+	<insert id="save" parameterType="SysUser" useGeneratedKeys="true" keyProperty="uId" flushCache="true">
+		insert into customer(first_name, last_name, email, address_id) values(#{first_name}, #{last_name}, #{email}, #{address_id})
+	</insert>
+	
+	<select id="selectById" parameterType="int" resultType="SysUser" useCache="false">
+	    select * from customer where customer_id=#{customer_id}
+	</select>
+	
+	<delete id="deleteById" parameterType="int" flushCache="true">
+	   DELETE from customer where customer_id=#{customer_id}
+	</delete>
+	
+	<select id="selectAll" resultType="SysUser">
+	    select * from customer
+	</select>
+	
+	<select id="login" resultType="SysUser" parameterType="String">
+		select * from customer where first_name = #{first_name}
+	</select>
+	
+</mapper> 
